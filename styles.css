@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: hsl(225, 100%, 94%);
     font-family: 'Red Hat Display', sans-serif;
+    background: url(./images/pattern-background-mobile.svg), hsl(225, 100%, 94%);
 }
 
 .hero {
@@ -31,6 +31,7 @@ body {
     margin: 0 auto;
     background-color: hsl(225, 100%, 98%);
     border-radius: 0 0 1.25em 1.25em;
+    box-shadow: 0 10px 10px 4px rgba(128, 128, 128, 0.1);
 }
 
 h1 {
@@ -55,10 +56,122 @@ p {
     justify-content: center;
     background-color: hsla(224, 23%, 55%, 0.074);
     margin: 1.5em;
-    border-radius: .5em;
+    border-radius: .6em;
     padding: 1em;
+}
+
+.plan-box-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1.5em;
+    padding: 0 1em;
+}
+
+.annual {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.price {
+    color: hsl(224, 23%, 55%);
+    font-size: 14px;
 }
 
 .change {
     color: hsl(245, 75%, 52%);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    padding-left: 1.18em;
+    transition: all .2s ease;
+}
+
+.change:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.pay {
+    text-decoration: none;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    border-radius: .6em;
+    color: hsl(225, 100%, 98%);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 1em;
+    width: 85%;
+    box-shadow: 0 10px 10px 4px rgba(128, 128, 128, 0.202);
+    transition: all .2s ease;
+}
+
+.pay:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all .2s ease;
+}
+
+.cancel {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: hsl(224, 23%, 55%);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 1.5em;
+    width: 85%;
+    transition: all .2s ease;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: black;
+    transition: all .2s ease;
+}
+
+@media (min-width: 500px) {
+    body {
+        background: url(./images/pattern-background-desktop.svg), hsl(225, 100%, 94%);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 14em;
+    }
+    
+    .hero {
+        width: 25em;
+    }
+
+    .main {
+        width: 25em;
+    }
+
+    h1 {
+        margin-top: 1.5em;
+        margin-bottom: .7em;
+        font-size: 25px;
+    }
+
+    .plan-box {
+        width: 85%;
+    }
+
+    .change {
+        margin-left: 4.5em;
+    }
+
+    .pay {
+        font-size: 14px;
+    }
+
+    .cancel {
+        padding-bottom: 3em ;
+        font-size: 14px;
+    }
 }
